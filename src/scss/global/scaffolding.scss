@@ -1,0 +1,30 @@
+@import "variables.scss";
+@import "nullstyles.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+
+body {
+    margin: 0 auto;
+    position: relative;
+    min-width: 320px;
+    max-width: 1200px;
+    font-family: 'FuturaPT', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: black;
+    background-color: #fff;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
