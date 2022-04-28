@@ -5,16 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Document</title>
-  <h1 class="visually-hidden">Интернет магазин сертифицированных златоустовских ножей</h1>
+  <title>Allamuchy Auto Parts</title>
+  <h1 class="visually-hidden">Allamuchy Auto Parts</h1>
 </head>
 <body>
-  <header>
-    <!-- <div style="width: 100px;">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.474238081885!2d-74.86174248414696!3d40.92727247930912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c378bafd35664d%3A0xbc4021f9ac511fb4!2zNzcgR2liYnMgUmQsIEdyZWVuIFRvd25zaGlwLCBOSiAwNzgyMSwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1651073657636!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div> -->
+   <header class="header">
+      <div class="header__top top-header">
+         <div class="top-header__wrapper">
+            <nav class="top-header__nav nav">
+               <a class="nav__link" href="#about-us">About us</a>
+               <a class="nav__link" href="#order-part">How to order parts</a>
+               <a class="nav__link" href="#why-shop">Why shop used parts</a>
+            </nav>
+            <div class="top-header__contacts contacts-header">
+               <a class="contacts-header__phone" href="tel:9088527444"><p class="contacts-header__phone-number">908-852-7444</p></a>
+               <a class="contacts-header__mail" href="mailto:info@allamuchyparts.com" rel="noopener noreferrer">Email: info@allamuchyparts.com</a>
+            </div>
+         </div>
+      </div>
 
-<!-- <svg width="24px" height="18px" viewBox="0 0 24 18" xmlns="http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg">
+      <div class="header__center center-header">
+         <p class="center-header__title">Allamuchy<br><span>Auto Parts</span></p>
+         <p class="center-header__description"><span>Affordable Late Model Used Auto Parts</span></p>
+      </div>
+
+      <div class="header__bottom bottom-header">
+         <div class="bottom-header__wrapper">
+            <p class="bottom-header__scroll">Scroll down</p>
+            <button class="bottom-header__download" type="button">Download</button>
+            <p class="bottom-header__location">77 Gibbs Rd<br>Andover NJ 07821</p>
+            <a class="bottom-header__paypal" href="#paypal"><p class="visually-hidden">Payal</p></a>
+         </div>
+      </div>
+   </header>
+   <main>
+
+   <section class="form">
+      <!-- <svg width="24px" height="18px" viewBox="0 0 24 18" xmlns="http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg">
    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g transform="translate(-3.000000, -6.000000)" fill="#ffffff" fill-rule="nonzero">
          <path d="M8.27521338,12.5122653 C7.93003542,12.5122653 7.65021338,12.2324432 7.65021338,11.8872653 C7.65021338,11.5420873 7.93003542,11.2622653 8.27521338,11.2622653 L24.7879042,11.2622653 C25.5955939,11.2622653 26.25,11.9175905 26.25,12.7255368 L26.25,22.2867284 C26.25,23.0946748 25.5955939,23.75 24.7879042,23.75 L5.21231302,23.75 C4.40462325,23.75 3.75,23.0946748 3.75,22.2867397 L3.75,7.71327152 C3.75,6.90532518 4.40440608,6.25 5.21227212,6.25 L24.7880664,6.25552163 C25.5956079,6.25573147 26.25,6.91099507 26.25,7.71870362 L26.25,9.23577161 C26.25,9.58094958 25.9702675,9.86081168 25.6250895,9.86086112 C25.2799115,9.86091055 25.0000494,9.5811286 25,9.23595063 L24.9997827,7.71879313 C24.9997827,7.60083189 24.9046611,7.50555197 24.7877278,7.50552158 L5.21209583,7.49999998 C5.09515506,7.49999998 5,7.59528868 5,7.71326028 L5.00021718,22.2867284 C5.00021718,22.4047113 5.09537223,22.5 5.21231302,22.5 L24.7879042,22.5 C24.904845,22.5 25,22.4047113 25,22.2867284 L25,12.7255368 C25,12.607554 24.9048449,12.5122653 24.7879042,12.5122653 L8.27521338,12.5122653 Z" id="Stroke-1"></path>
@@ -43,12 +70,13 @@
    <path fill="#003087" d="M 35.437 10 L 31.737 10 C 31.437 10 31.137 10.2 31.137 10.5 L 30.937 11.5 L 30.637 11.1 C 29.837 9.9 28.037 9.5 26.237 9.5 C 22.137 9.5 18.637 12.6 17.937 17 C 17.537 19.2 18.037 21.3 19.337 22.7 C 20.437 24 22.137 24.6 24.037 24.6 C 27.337 24.6 29.237 22.5 29.237 22.5 L 29.037 23.5 C 28.937 23.9 29.237 24.3 29.637 24.3 L 33.037 24.3 C 33.537 24.3 34.037 23.9 34.137 23.4 L 36.137 10.6 C 36.237 10.4 35.837 10 35.437 10 Z M 30.337 17.2 C 29.937 19.3 28.337 20.8 26.137 20.8 C 25.037 20.8 24.237 20.5 23.637 19.8 C 23.037 19.1 22.837 18.2 23.037 17.2 C 23.337 15.1 25.137 13.6 27.237 13.6 C 28.337 13.6 29.137 14 29.737 14.6 C 30.237 15.3 30.437 16.2 30.337 17.2 Z"></path>
    <path fill="#003087" d="M 55.337 10 L 51.637 10 C 51.237 10 50.937 10.2 50.737 10.5 L 45.537 18.1 L 43.337 10.8 C 43.237 10.3 42.737 10 42.337 10 L 38.637 10 C 38.237 10 37.837 10.4 38.037 10.9 L 42.137 23 L 38.237 28.4 C 37.937 28.8 38.237 29.4 38.737 29.4 L 42.437 29.4 C 42.837 29.4 43.137 29.2 43.337 28.9 L 55.837 10.9 C 56.137 10.6 55.837 10 55.337 10 Z"></path><path fill="#009cde" d="M 67.737 2.8 L 59.937 2.8 C 59.437 2.8 58.937 3.2 58.837 3.7 L 55.737 23.6 C 55.637 24 55.937 24.3 56.337 24.3 L 60.337 24.3 C 60.737 24.3 61.037 24 61.037 23.7 L 61.937 18 C 62.037 17.5 62.437 17.1 63.037 17.1 L 65.537 17.1 C 70.637 17.1 73.637 14.6 74.437 9.7 C 74.737 7.6 74.437 5.9 73.437 4.7 C 72.237 3.5 70.337 2.8 67.737 2.8 Z M 68.637 10.1 C 68.237 12.9 66.037 12.9 64.037 12.9 L 62.837 12.9 L 63.637 7.7 C 63.637 7.4 63.937 7.2 64.237 7.2 L 64.737 7.2 C 66.137 7.2 67.437 7.2 68.137 8 C 68.637 8.4 68.737 9.1 68.637 10.1 Z"></path><path fill="#009cde" d="M 90.937 10 L 87.237 10 C 86.937 10 86.637 10.2 86.637 10.5 L 86.437 11.5 L 86.137 11.1 C 85.337 9.9 83.537 9.5 81.737 9.5 C 77.637 9.5 74.137 12.6 73.437 17 C 73.037 19.2 73.537 21.3 74.837 22.7 C 75.937 24 77.637 24.6 79.537 24.6 C 82.837 24.6 84.737 22.5 84.737 22.5 L 84.537 23.5 C 84.437 23.9 84.737 24.3 85.137 24.3 L 88.537 24.3 C 89.037 24.3 89.537 23.9 89.637 23.4 L 91.637 10.6 C 91.637 10.4 91.337 10 90.937 10 Z M 85.737 17.2 C 85.337 19.3 83.737 20.8 81.537 20.8 C 80.437 20.8 79.637 20.5 79.037 19.8 C 78.437 19.1 78.237 18.2 78.437 17.2 C 78.737 15.1 80.537 13.6 82.637 13.6 C 83.737 13.6 84.537 14 85.137 14.6 C 85.737 15.3 85.937 16.2 85.737 17.2 Z"></path><path fill="#009cde" d="M 95.337 3.3 L 92.137 23.6 C 92.037 24 92.337 24.3 92.737 24.3 L 95.937 24.3 C 96.437 24.3 96.937 23.9 97.037 23.4 L 100.237 3.5 C 100.337 3.1 100.037 2.8 99.637 2.8 L 96.037 2.8 C 95.637 2.8 95.437 3 95.337 3.3 Z"></path>
 </svg> -->
-  </header>
-  <main>
-  </main>
-  <footer>
-
-  </footer>
-  <script src="js/app.min.js"></script>
+   </section>
+   </main>
+   <footer>
+   <!-- <div style="width: 100px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.474238081885!2d-74.86174248414696!3d40.92727247930912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c378bafd35664d%3A0xbc4021f9ac511fb4!2zNzcgR2liYnMgUmQsIEdyZWVuIFRvd25zaGlwLCBOSiAwNzgyMSwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1651073657636!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div> -->
+   </footer>
+   <script src="js/app.min.js"></script>
 </body>
 </html>

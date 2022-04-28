@@ -24,10 +24,10 @@ export const scss = () => {
 
       //Обработка ошибок, если нужны уведомления, расскоментировать
       .pipe(app.plugins.plumber(
-         // app.plugins.notify.onError({
-         //    title: "SCSS",
-         //    message: "Error: <%= error.message %>"
-         // })
+         app.plugins.notify.onError({
+            title: "SCSS",
+            message: "Error: <%= error.message %>"
+         })
       ))
 
       //Ищем картинки с вхождением @img и меняем img/

@@ -3,17 +3,22 @@
 @import "mixins.scss";
 @import "fonts.scss";
 
+
 body {
     margin: 0 auto;
     position: relative;
     min-width: 320px;
     max-width: 1200px;
     font-family: 'FuturaPT', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1;
     font-weight: 500;
-    color: black;
+    color: #b5b5b5;
     background-color: #fff;
+}
+
+a {
+    color: #b5b5b5;
 }
 
 .visually-hidden:not(:focus):not(:active) {
