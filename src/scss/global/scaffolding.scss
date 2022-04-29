@@ -19,13 +19,15 @@ body {
     font-weight: 500;
     color: #b5b5b5;
     background-color: #fff;
+}
 
-        background-image: url('../../img/body_background.jpg');
-        background-repeat:no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-   // background-size: 1200px 100vh;
-
+.body-wrapper {
+  height: 100vh;
+  background-image: url('../../img/body_background.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: auto 100vh;
 }
 
 a {

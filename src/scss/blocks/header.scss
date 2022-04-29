@@ -2,11 +2,7 @@
    padding: 40px 0;
    width: 100%;
    background-color: #000;
-
-   background-image: linear-gradient(to right, rgba(0,0,0, 0.7) 0 100%), url('../../img/header_background.jpg');
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: contain;
+   overflow: hidden;
 
    @media (max-width: 1000px) {
       padding: 30px 0;
@@ -16,9 +12,41 @@
       padding: 15px 0 25px;
    }
 
+   // .header__wrapper
+   &__wrapper {
+      position: relative;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-image: linear-gradient(to right, rgba(0,0,0, 0.7) 0 100%), url('../../img/header_background.jpg');
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-size: contain;
+         animation-name: recovery-background;
+         animation-duration: 10s;
+         animation-timing-function: cubic-bezier(.19,1,.22,1);
+         animation-iteration-count: 1;
+         animation-delay: 1s;
+         animation-fill-mode: forwards;
+         opacity: 0;
+
+         @keyframes recovery-background {
+            100% {
+               opacity: 1;
+            }
+         }
+      }
+   }
+
    // .header__top
    &__top {
       margin: 0 30px 90px;
+  ;
 
       @media (max-width: 1000px) {
          margin: 0 15px 90px;
@@ -84,8 +112,41 @@
 }
 
 .nav {
+   @media (max-width: 950px) {
+      a {
+         color: #ffd7b2;
+      }
+   }
+
    // .nav__link
    &__link {
+      opacity: 0;
+      transform: translate(0, -100px);
+      animation-name: recovery-title;
+      animation-timing-function: cubic-bezier(.19,1,.22,1);
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+
+      &:first-child {
+         animation-delay: 1s;
+      }
+
+      &:nth-child(2) {
+         animation-delay: 1.2s;
+      }
+
+      &:last-child {
+         animation-delay: 1.4s;
+      }
+
+      @keyframes recovery-title {
+         100% {
+            opacity: 1;
+            transform: translate(0, 0);
+         }
+      }
+
       &:hover {
          text-decoration: underline;
          color: $orange;
@@ -94,13 +155,22 @@
       &:active {
          text-decoration: underline;
          color: $orange;
-
       }
-   }
 
-   @media (max-width: 950px) {
-      a {
-         color: #ffd7b2;
+      @media (max-width: 404px) {
+         transform: translate(-100px, 0);
+
+         &:first-child {
+            animation-delay: 1.2s;
+         }
+
+         &:nth-child(2) {
+            animation-delay: 1.4s;
+         }
+
+         &:last-child {
+            animation-delay: 1.6s;
+         }
       }
    }
 }
@@ -111,6 +181,21 @@
    flex-direction: column;
    font-family: 'FuturaPT', Arial, sans-serif;
    line-height: 1.55;
+   opacity: 0;
+   transform: translateX(100px);
+   animation-name: recovery-contacts-header;
+   animation-duration: 1s;
+   animation-timing-function: cubic-bezier(.19,1,.22,1);
+   animation-iteration-count: 1;
+   animation-delay: 1.6s;
+   animation-fill-mode: forwards;
+
+   @keyframes recovery-contacts-header {
+      100% {
+         opacity: 1;
+         transform: translateX(0);
+      }
+   }
 
    @media (max-width: 950px) {
       margin-bottom: 20px;
@@ -127,6 +212,7 @@
 
    @media (max-width: 404px) {
       margin-bottom: 25px;
+      animation-delay: 1s;
    }
 
    // .contacts-header__phone
@@ -179,6 +265,7 @@
    &__mail {
       font-size: 18px;
       font-weight: 700;
+      z-index: 10;
 
       @media (max-width: 950px) {
          font-size: 16px;
@@ -207,7 +294,21 @@
       text-transform: uppercase;
       text-align: center;
       color: #ffd7b2;
-      opacity: 0.8;
+      opacity: 0;
+      transform: translateY(-150px);
+      animation-name: recovery-title;
+      animation-duration: 1.8s;
+      animation-timing-function: cubic-bezier(.19,1,.22,1);
+      animation-iteration-count: 1;
+      animation-delay: 1.8s;
+      animation-fill-mode: forwards;
+
+      @keyframes recovery-title {
+         100% {
+            opacity: 0.8;
+            transform: translateY(0);
+         }
+      }
 
       span {
          font-size: 22px;
@@ -256,8 +357,23 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       text-align: center;
+      opacity: 0;
+      transform: translateY(150px);
       background-image: linear-gradient(120deg, rgba(255,189,127,1) 0%, rgba(255,123,0,1) 100%);
       -webkit-background-clip: text;
+      animation-name: recovery-description;
+      animation-duration: 1.8s;
+      animation-timing-function: cubic-bezier(.19,1,.22,1);
+      animation-iteration-count: 1;
+      animation-delay: 1.8s;
+      animation-fill-mode: forwards;
+
+      @keyframes recovery-description {
+         100% {
+            opacity: 0.8;
+            transform: translateY(0);
+         }
+      }
 
       span {
          color: transparent;
@@ -279,6 +395,24 @@
 }
 
 .bottom-header {
+   // .bottom-header__wrapper
+   &__wrapper {
+      padding-bottom: 70px;
+      position: relative;
+
+      @media (max-width: 950px) {
+         padding-bottom: 60px;
+      }
+
+      @media (max-width: 653px) {
+         padding-bottom: 45px;
+      }
+
+      @media (max-width: 500px) {
+         padding-bottom: 0;
+      }
+   }
+
    // .bottom-header__content
    &__content {
       position: relative;
@@ -292,7 +426,7 @@
       }
    }
 
-      // .bottom-header__scroll
+   // .bottom-header__scroll
    &__scroll {
       padding-right: 27px;
       position: absolute;
@@ -424,6 +558,21 @@
       font-weight: 500;
       text-align: right;
       color: #b5b5b5;
+      opacity: 0;
+      transform: translateX(100px);
+      animation-name: recovery-location-header;
+      animation-duration: 1s;
+      animation-timing-function: cubic-bezier(.19,1,.22,1);
+      animation-iteration-count: 1;
+      animation-delay: 1.6s;
+      animation-fill-mode: forwards;
+
+      @keyframes recovery-location-header {
+         100% {
+            opacity: 1;
+            transform: translateX(0);
+         }
+      }
 
       &::before {
          content: '';
@@ -471,8 +620,39 @@
             height: 16px;
          }
       }
+
+      @media (max-width: 404px) {
+      animation-delay: 1s;
+   }
    }
 
    // .bottom-header__paypal
-   &__paypal {}
+   &__paypal {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 157px;
+      height: 32px;
+      border-radius: 30px;
+      background-color: #FFAC35;
+      background-image: url('../../img/paypal_background.png');
+      background-size: cover;
+
+      @media(max-width: 950px) {
+         width: 147px;
+         height: 31px;
+      }
+
+      @media (max-width: 653px) {
+         width: 129px;
+         height: 25px;
+      }
+
+      @media (max-width: 500px) {
+         left: 0;
+         bottom: 0;
+         width: 120px;
+         height: 24px;
+      }
+   }
 }
