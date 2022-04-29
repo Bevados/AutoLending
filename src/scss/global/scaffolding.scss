@@ -4,6 +4,10 @@
 @import "fonts.scss";
 
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
     margin: 0 auto;
     position: relative;
@@ -15,6 +19,13 @@ body {
     font-weight: 500;
     color: #b5b5b5;
     background-color: #fff;
+
+        background-image: url('../../img/body_background.jpg');
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+   // background-size: 1200px 100vh;
+
 }
 
 a {
