@@ -631,28 +631,10 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      width: 157px;
-      height: 32px;
-      border-radius: 30px;
-      background-color: #FFAC35;
-      background-image: url('../../img/paypal_background.png');
-      background-size: cover;
-
-      @media(max-width: 950px) {
-         width: 147px;
-         height: 31px;
-      }
-
-      @media (max-width: 653px) {
-         width: 129px;
-         height: 25px;
-      }
 
       @media (max-width: 500px) {
          left: 0;
          bottom: 0;
-         width: 120px;
-         height: 24px;
       }
    }
 }

@@ -1,0 +1,194 @@
+.footer {
+   position: relative;
+   display: flex;
+   align-items: start;
+   width: 100%;
+   height: 450px;
+   overflow: hidden;
+
+   // .footer__contacts
+   &__contacts {
+      position: relative;
+      width: 50%;
+   }
+   // .footer__map
+   &__map {
+      position: relative;
+      width: 50%;
+      overflow: hidden;
+   }
+
+   @media (max-width: 960px) {
+      flex-direction: column;
+      height: auto;
+
+      &__contacts {
+         // flex: 1 1 10;
+         width: 100%
+      }
+      // .footer__map
+      &__map {
+         // flex: 1 1 100%;
+         width: 100%;
+      }
+   }
+}
+
+.contacts-footer {
+   background-color: #000;
+   background-image: linear-gradient(to bottom, rgba(0,0,0, 0.8), rgba(0,0,0,0.8)), url('../../img/footer_background.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+		// .contacts-footer__title
+		&__title {
+         margin: 30px 30px 15px;
+         position: relative;
+         font-family: 'ReformaGrotesk',Arial,sans-serif;
+         font-size: 70px;
+         line-height: 1.55;
+         font-weight: 500;
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         color: #ff7b00;
+
+         @media (max-width: 960px) {
+
+            font-size: 44px;
+         }
+
+         @media (max-width: 640px) {
+
+         }
+
+         @media (max-width: 450px) {
+
+            font-size: 38px;
+         }
+      }
+
+		// .contacts-footer__wrapper
+		&__wrapper {
+         margin: 0 30px;
+         display: flex;
+         flex-direction: column;
+         font-size: 24px;
+         font-family: 'FuturaPT',Arial,sans-serif;
+         line-height: 1.55;
+         font-weight: 600;
+         color: #fff;
+         letter-spacing: 2px;
+
+         & a {
+            color: #fff;
+         }
+      }
+
+		// .contacts-footer__phone
+		&__phone {
+         margin-bottom: 5px;
+
+         @media (max-width: 950px) {
+            font-size: 18px;
+            text-align: left;
+         }
+
+         &:hover {
+            color: $orange;
+         }
+
+         &:active {
+            color: $orange;
+            -webkit-tap-highlight-color: transparent;
+         }
+      }
+
+		// .contacts-footer__phone-number
+		&__phone-number {
+         padding-left: 28px;
+         display: inline-block;
+         position: relative;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: -3px;
+            width: 28px;
+            height: 28px;
+            background-image: url('../../img/icons/call.png');
+            background-size: cover;
+         }
+
+         @media (max-width: 950px) {
+            &::before {
+               top: 0px;
+            }
+         }
+      }
+
+		// .contacts-footer__mail
+		&__mail {
+         margin-bottom: 20px;
+      }
+
+
+      // .bottom-header__location-wrapper
+      &__location-wrapper {
+         margin-bottom: 20px;
+         align-self: start;
+      }
+
+		// .contacts-footer__location
+		&__location {
+         position: relative;
+         line-height: 28px;
+         font-weight: 500;
+         letter-spacing: 0;
+         text-align: right;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 28px;
+            width: 28px;
+            height: 28px;
+            background-image: url('../../img/icons/location.png');
+            background-size: cover;
+         }
+      }
+
+		// .contacts-footer__payment
+		&__payment {
+         margin-bottom: 80px;
+         font-size: 17px;
+         letter-spacing: 3px;
+      }
+
+		// .contacts-footer__payment-title
+		&__payment-title {
+         color: #ff7b00;
+      }
+
+		// .contacts-footer__payment-info
+		&__payment-info {}
+
+		// .contacts-footer__paypal
+		&__paypal {
+         position: absolute;
+         right: 30px;
+         bottom: 30px;
+      }
+}
+
+
+// .footer__google-map {
+//    position: relative;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: 475.48px;
+
+// }
