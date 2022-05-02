@@ -50,6 +50,10 @@
       color: #ff7b00;
       z-index: 2;
 
+      @media (max-width: 1100px) {
+         font-size: 70px;
+      }
+
       @media (max-width: 960px) {
          margin: 0 50px 15px;
          font-size: 44px;
@@ -184,6 +188,10 @@
       &._active {
          transform: translate(0, 0);
          opacity: 1;
+      }
+
+      @media (max-width: 1100px) {
+         top: 130px;
       }
 
       @media(max-width: 960px) {
