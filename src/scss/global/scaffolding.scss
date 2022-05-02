@@ -22,13 +22,11 @@ body {
 }
 
 .body-wrapper {
-
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../img/body_background.jpg');
   background-repeat:no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  // background-size: auto 100vh;
 }
 
 a {
@@ -75,3 +73,17 @@ a {
         height: 25px;
     }
 }
+
+
+// .overlay {
+//   display: state;
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   padding: 16px;
+//   background-color: rgba(1, 1, 1, 0.8);
+//   z-index: 1;
+//   overflow: auto;
+// }
