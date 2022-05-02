@@ -120,6 +120,7 @@
 
    // .nav__link
    &__link {
+      position: relative;
       opacity: 0;
       transform: translate(0, -100px);
       animation-name: recovery-title;
@@ -127,6 +128,18 @@
       animation-duration: 1s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
+
+
+      &::before {
+         content: '';
+         position: absolute;
+         bottom: -3px;
+         left: 50%;
+         width: 0;
+         height: 2px;
+         background-color: $orange;
+         transition: all 0.5s ease 0s;
+      }
 
       &:first-child {
          animation-delay: 1s;
@@ -147,13 +160,18 @@
          }
       }
 
-      &:hover {
-         text-decoration: underline;
-         color: $orange;
+      @media (hover: hover) {
+         &:hover {
+            color: $orange;
+            &::before {
+               width: 100%;
+               left: 0;
+            }
+         }
       }
 
+
       &:active {
-         text-decoration: underline;
          color: $orange;
       }
 
