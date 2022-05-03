@@ -2,9 +2,9 @@
    position: absolute;
    top: 0;
    left: 50%;
-   width: 560px;
+   width: 460px;
    font-family: 'Arial';
-   font-size: 16px;
+   font-size: 14px;
    line-height: 1.55;
    font-weight: 300;
    background-color: #fff;
@@ -12,6 +12,15 @@
    transition: transform 0.5s ease 0s, opacity 1s ease 0s, scale 1s ease 0s;
    opacity: 0;
    z-index: -1;
+
+   @media(max-width: 640px) {
+      font-size: 12px;
+      line-height: 1.45;
+   }
+
+   @media(max-width: 460px) {
+      width: 100%;
+   }
 
    &._open {
       transform: translate(-50%, -50%) scale(1);
@@ -34,22 +43,39 @@
    &__wrapper {
       padding: 40px 45px;
       width: 100%;
+
+      @media(max-width: 960px) {
+         padding: 30px 30px;
+      }
+
+      @media(max-width: 640px) {
+         padding: 20px 20px;
+      }
    }
 
    // .download__title
    &__title {
       margin-bottom: 17px;
       font-family: 'FuturaPT',Arial,sans-serif;
-      font-size: 32px;
+      font-size: 30px;
       line-height: 1.17;
       font-weight: 600;
       text-align: center;
       color: #000;
+
+      @media(max-width: 640px) {
+         margin-bottom: 10px;
+         font-size: 26px;
+      }
    }
 
    // .download__list
    &__list {
       margin-bottom: 16px;
+
+      @media(max-width: 640px) {
+         margin-bottom: 10px;
+      }
    }
 
    // .download__item
@@ -70,11 +96,11 @@
 
    // .download__mail
    &__mail {
+      padding: 15px 25px;
       position: relative;
       left: 50%;
       transform: translateX(-50%);
       display: inline-block;
-      padding: 15px 25px;
       font-family: 'FuturaPT',Arial,sans-serif;
       font-size: 14px;
       font-weight: 700;
@@ -83,6 +109,11 @@
       border: 2px solid #222222;
       border-radius: 100px;
       cursor: pointer;
+
+      @media(max-width: 640px) {
+         padding: 13px 18px;
+         font-size: 12px;
+      }
    }
 }
 
@@ -97,8 +128,6 @@
    background-color: transparent;
    transform: translate(0, 20px);
    transition: opacity 1s ease 0s;
-   opacity: 0;
-   z-index: -1;
 
    &._open {
       opacity: 1;

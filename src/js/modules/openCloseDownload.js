@@ -28,12 +28,12 @@ function closingDownload() {
    download.classList.add('_close');
    closeDownload.classList.remove('_open');
    closeDownload.classList.add('_close');
-   overlay.style = `display: none; z-index: -1;`;
+   overlay.style = `z-index: -1; opacity: 0;`;
    document.body.style = `overflow: none;`;
 
    document.removeEventListener('click', checkClick);
    document.removeEventListener('keydown', clickEsc);
-};
+}
 
 
 //Функция открытия
@@ -46,7 +46,7 @@ function openDownload(evt) {
       closeDownload.style = `top: ${window.pageYOffset}px;`;
       closeDownload.classList.remove('_close');
       closeDownload.classList.add('_open');
-      overlay.style = `display: block; z-index: 15;`;
+      overlay.style = `z-index: 15; opacity: 0.6;`;
       document.body.style = `overflow: hidden;`;
 
       document.addEventListener('click', checkClick);

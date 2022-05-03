@@ -3,10 +3,18 @@
 @import "mixins.scss";
 @import "fonts.scss";
 
-
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+
+
+// @media screen and (min-width: 960px) {
+//   html {
+//     overflow-x: hidden;
+//     margin-right: calc(-1 * (100vw - 100%));
+//   }
+// }
 
 body {
   margin: 0 auto;
@@ -19,7 +27,13 @@ body {
   font-weight: 500;
   color: #b5b5b5;
   background-color: #fff;
+
+
 }
+
+// body[style*= 'overflow: hidden'] {
+//   padding-right: 8px;
+// }
 
 .body-wrapper {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../img/body_background.jpg');
@@ -30,15 +44,17 @@ body {
 }
 
 .overlay {
-  display: none;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   background-color: rgba(1, 1, 1, 0.8);
+  background-color: #000;
+  opacity: 0;
   z-index: -1;
   overflow: auto;
+  transition: opacity 0.5s ease 0s;
 }
 
 a {
