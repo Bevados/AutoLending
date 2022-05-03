@@ -9,16 +9,16 @@
 }
 
 body {
-    margin: 0 auto;
-    position: relative;
-    min-width: 320px;
-    max-width: 1200px;
-    font-family: 'FuturaPT', sans-serif;
-    font-size: 18px;
-    line-height: 1;
-    font-weight: 500;
-    color: #b5b5b5;
-    background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  min-width: 320px;
+  max-width: 1200px;
+  font-family: 'FuturaPT', sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+  color: #b5b5b5;
+  background-color: #fff;
 }
 
 .body-wrapper {
@@ -27,6 +27,18 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.8);
+  z-index: -1;
+  overflow: auto;
 }
 
 a {
@@ -75,15 +87,3 @@ a {
 }
 
 
-// .overlay {
-//   display: state;
-//   position: fixed;
-//   left: 0;
-//   right: 0;
-//   top: 0;
-//   bottom: 0;
-//   padding: 16px;
-//   background-color: rgba(1, 1, 1, 0.8);
-//   z-index: 1;
-//   overflow: auto;
-// }
