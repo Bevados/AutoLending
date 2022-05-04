@@ -97,7 +97,7 @@
 		&__phone {
          margin-bottom: 5px;
          transform: translate(-50%, 0);
-         transition: all 1s ease 0.7s;
+         transition: transform 1s ease 0.7s, opacity 1s ease 0.7s;
          opacity: 0;
 
          &._active {
@@ -149,12 +149,21 @@
 		&__mail {
          margin-bottom: 20px;
          transform: translate(-50%, 0);
-         transition: all 1s ease 0.7s;
+         transition: transform 1s ease 0.7s, opacity 1s ease 0.7s;
          opacity: 0;
 
          &._active {
             transform: translate(0, 0);
             opacity: 1;
+         }
+
+         &:hover {
+            color: $orange;
+         }
+
+         &:active {
+            color: $orange;
+            -webkit-tap-highlight-color: transparent;
          }
 
          @media (max-width: 450px) {
@@ -167,7 +176,6 @@
             letter-spacing: 1px;
          }
       }
-
 
       // .contacts-footer__location-wrapper
       &__location-wrapper {

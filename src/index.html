@@ -40,7 +40,7 @@
                      <button class="bottom-header__download modal-download" type="button">Download</button>
                      <p class="bottom-header__location">77 Gibbs Rd<br>Andover NJ 07821</p>
                   </div>
-                  <a class="bottom-header__paypal paypal-button" href="#paypal"><p class="visually-hidden">Payal</p></a>
+                  <a class="bottom-header__paypal paypal-button" href="#pay"><p class="visually-hidden">Payal</p></a>
                </div>
             </div>
          </div>
@@ -119,9 +119,38 @@
                </div>
             </div>
 
+            <div class="order-part__paypal paypal">
+               <article class="order-part__anchor-link" id="pay"><p class="visually-hidden">content block to order part</p></article>
+               <div id="paypal-button-container"></div>
+               <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+               <script>
+                  paypal.Buttons({
+                     createOrder: function(data, actions) {
+                        return actions.order.create({
+                           purchase_units: [{
+                                 amount: {
+                                    value: '88.44'
+                                 }
+                           }]
+                        });
+                     },
+
+                     onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(orderData) {
+                           console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                           var transaction = orderData.purchase_units[0].payments.captures[0];
+                           alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+                        });
+                     }
+
+                  }).render('#paypal-button-container');
+               </script>
+            </div>
          </section>
 
          <section >
+
+
             <!-- <svg width="24px" height="18px" viewBox="0 0 24 18" xmlns="http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg">
          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g transform="translate(-3.000000, -6.000000)" fill="#ffffff" fill-rule="nonzero">
@@ -187,7 +216,7 @@
                   <p class="contacts-footer__payment-info">We accept Cash,Credit Cards,PayPal.</p>
                </div>
             </div>
-            <a class="contacts-footer__paypal paypal-button" href="#paypal"><p class="visually-hidden">Payal</p></a>
+            <a class="contacts-footer__paypal paypal-button" href="#pay"><p class="visually-hidden">Payal</p></a>
          </div>
          <div class="footer__map">
             <iframe width="100%" height="450" class="footer__google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.474053189157!2d-74.86174248428297!3d40.92727653235367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c378bafd35664d%3A0xbc4021f9ac511fb4!2zNzcgR2liYnMgUmQsIEdyZWVuIFRvd25zaGlwLCBOSiAwNzgyMSwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1651477625609!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
