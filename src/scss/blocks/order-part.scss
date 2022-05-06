@@ -452,10 +452,33 @@
 
 // .form
 .form {
+   position: relative;
    display: flex;
    flex-direction: column;
    gap: 10px 0;
    width: 522px;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(51, 51, 51, 0);
+      background-image: url('../../img/icons/load.gif');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 50px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease 0s;
+   }
+
+   &._sending::after {
+      opacity: 1;
+      visibility: visible;
+   }
 
    @media (max-width: 960px) {
       width: 431px;
@@ -512,9 +535,18 @@
          border: 1px solid #000000;
          border-radius: 9px;
          background-color: #f2f3f4;
+         transition: all 0.5s ease 0s;
 
          @media (max-width: 640px) {
             padding: 7px 20px;
+         }
+
+         &:focus {
+            box-shadow: 0 0 15px #fff;
+         }
+
+         &._error {
+            box-shadow: 0 0 15px red;
          }
       }
 
